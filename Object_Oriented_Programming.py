@@ -22,13 +22,13 @@ class Fraction(object):
         count = 1
         done = False
 
-        while not done and common_denom >= count:
+        while not done and common_denom >= 1:
             if high_value % common_denom == 0:
                 done = True
             else:
                 count += 1
                 common_denom = low_value / count
-                while common_denom % 1 != 0 and common_denom >= count:
+                while common_denom % 1 != 0 and common_denom >= 1:
                     count += 1
                     common_denom = low_value / count
 
