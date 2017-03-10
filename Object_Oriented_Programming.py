@@ -44,17 +44,13 @@ class Fraction(object):
         """ Returns a new fraction representing the addition """
         top = self.num * other.denom + self.denom * other.num
         bott = self.denom * other.denom
-        new_fraction = Fraction(top, bott)
-        new_fraction.reduce()
-        return new_fraction
+        return Fraction(top, bott)
 
     def __sub__(self, other):
         """ Returns a new fraction representing the subtraction """
         top = self.num * other.denom - self.denom * other.num
         bott = self.denom * other.denom
-        new_fraction = Fraction(top, bott)
-        new_fraction.reduce()
-        return new_fraction
+        return Fraction(top, bott)
 
     def __float__(self):
         """ Returns a float value of the fraction """
